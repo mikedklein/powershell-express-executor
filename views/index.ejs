@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/styles/style.css">
+    <title><%= title %></title>
+    <script src="https://kit.fontawesome.com/ae03ad9431.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <%- include('./partials/_nav', {name: name}) %>
+    <div>
+      <main class="relative -mt-32">
+        <div class="max-w-screen-xl mx-auto pb-6 px-4 sm:px-6 lg:pb-16 lg:px-8">
+          <div class="bg-white rounded-lg shadow overflow-hidden">
+            <div class="divide-y divide-gray-200 lg:grid lg:grid-cols-12 lg:divide-y-0 lg:divide-x">
+
+              <%- include('./partials/_aside') %>
+              <%- include('./partials/_form', { status: status, error: error, parameterA: parameterA, parameterB: parameterB}) %>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

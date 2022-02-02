@@ -1,0 +1,99 @@
+<div class="relative bg-rose-700 pb-32 overflow-hidden">
+  <!-- Menu open: "bg-rose-900", Menu closed: "bg-transparent" -->
+  <nav class="bg-transparent relative z-10 border-b border-pink-500 border-opacity-25 lg:bg-transparent lg:border-none">
+    <div class="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
+      <div class="relative h-16 flex items-center justify-between lg:border-b lg:border-rose-800">
+        <div class="px-2 flex items-center lg:px-0">
+          <div class="flex-shrink-0">
+            <img class="block h-8 w-auto" src="https://assets-global.website-files.com/5e9fae47f9a5b161fc3f7024/5f69ecdab29e533a9f46b3ef_Graylog%20-%20Logo%20-%20Color.svg" alt="Workflow">
+          </div>
+          <div class="hidden lg:block lg:ml-6 lg:space-x-4">
+            <div class="flex">
+              <!-- Current: "bg-black bg-opacity-25", Default: "hover:bg-rose-800" -->
+              <a href="#" class="bg-black bg-opacity-25 rounded-md py-2 px-3 text-sm font-medium text-white">Script Runner</a>
+
+              <a href="#" class="hover:bg-rose-800 rounded-md py-2 px-3 text-sm font-medium text-white">PlaceHolder 1</a>
+
+              <a href="#" class="hover:bg-rose-800 rounded-md py-2 px-3 text-sm font-medium text-white">PlaceHolder 2</a>
+
+              <a href="#" class="hover:bg-rose-800 rounded-md py-2 px-3 text-sm font-medium text-white">PlaceHolder 3</a>
+            </div>
+          </div>
+        </div>
+        <div class="flex-1 px-2 flex justify-center lg:ml-6 lg:justify-end">
+          <div class="max-w-lg w-full lg:max-w-xs">
+            <label for="search" class="sr-only">Search</label>
+            <div class="relative text-rose-100 focus-within:text-gray-400">
+              <div class="pointer-events-none absolute inset-y-0 left-0 pl-3 flex items-center">
+                <!-- Heroicon name: solid/search -->
+                <svg class="flex-shrink-0 h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                  <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                </svg>
+              </div>
+              <input id="search" name="search" class="block w-full bg-rose-700 bg-opacity-50 py-2 pl-10 pr-3 border border-transparent rounded-md leading-5 placeholder-rose-100 focus:outline-none focus:bg-white focus:ring-white focus:border-white focus:placeholder-gray-500 focus:text-gray-900 sm:text-sm" placeholder="Search" type="search">
+            </div>
+          </div>
+        </div>
+        <div class="flex lg:hidden">
+          <!-- Mobile menu button -->
+          <button type="button" class="p-2 rounded-md inline-flex items-center justify-center text-rose-200 hover:text-white hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" aria-controls="mobile-menu" aria-expanded="false">
+            <span class="sr-only">Open main menu</span>
+            <!--
+              Icon when menu is closed.
+
+              Heroicon name: outline/menu
+
+              Menu open: "hidden", Menu closed: "block"
+            -->
+            <svg class="block flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+            <!--
+              Icon when menu is open.
+
+              Heroicon name: outline/x
+
+              Menu open: "block", Menu closed: "hidden"
+            -->
+            <svg class="hidden flex-shrink-0 h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+        </div>
+        <div class="hidden lg:block lg:ml-4">
+          <div class="flex items-center">
+            <button type="button" class="flex-shrink-0 rounded-full p-1 text-rose-200 hover:bg-rose-800 hover:text-white focus:outline-none focus:bg-rose-900 focus:ring-2 focus:ring-offset-2 focus:ring-offset-rose-900 focus:ring-white">
+              <span class="sr-only">View notifications</span>
+              <!-- Heroicon name: outline/bell -->
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- Menu open: "bottom-0", Menu closed: "inset-y-0" -->
+  <div aria-hidden="true" class="inset-y-0 absolute inset-x-0 left-1/2 transform -translate-x-1/2 w-full overflow-hidden lg:inset-y-0">
+    <div class="absolute inset-0 flex">
+      <div class="h-full w-1/2" style="background-color: #be123c;"></div>
+      <div class="h-full w-1/2" style="background-color: #ec4899;"></div>
+    </div>
+    <div class="relative flex justify-center">
+      <svg class="flex-shrink-0" width="1750" height="308" viewBox="0 0 1750 308" xmlns="http://www.w3.org/2000/svg">
+        <path d="M284.161 308H1465.84L875.001 182.413 284.161 308z" fill="#be185d" />
+        <path d="M1465.84 308L16.816 0H1750v308h-284.16z" fill="#ec4899" />
+        <path d="M1733.19 0L284.161 308H0V0h1733.19z" fill="#be123c" />
+        <path d="M875.001 182.413L1733.19 0H16.816l858.185 182.413z" fill="#881337" />
+      </svg>
+    </div>
+  </div>
+  <header class="relative py-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 class="text-3xl font-bold text-white">
+        <%= name %>
+      </h1>
+    </div>
+  </header>
+</div>

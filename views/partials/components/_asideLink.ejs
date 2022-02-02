@@ -1,0 +1,15 @@
+
+<% if (active) { %>
+  <a href="#" class="bg-pink-50 border-pink-500 text-pink-700 hover:bg-pink-50 hover:text-pink-700 group border-l-4 px-3 py-2 flex items-center text-sm font-medium" aria-current="page">
+  <%} else { %>
+    <a href="<%= url %>" class="border-transparent text-gray-900 hover:bg-gray-50 hover:text-gray-900 group border-l-4 px-3 py-2 flex items-center text-sm font-medium">
+
+  <% } %>
+
+  <div class="text-gray-400 group-hover:text-gray-500 flex-shrink-0 -ml-1 mr-3 h-6 w-6">
+    <i class="fad fa-<%= icon %> fa-1x"></i>
+  </div>
+  <span class="truncate">
+    <%= text %>
+  </span>
+</a>

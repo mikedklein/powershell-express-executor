@@ -1,0 +1,61 @@
+<form class="divide-y divide-gray-200 lg:col-span-9" action="/" method="POST">
+
+  <div class="py-6 px-4 sm:p-6 lg:pb-8">
+    <div>
+      <h2 class="text-lg leading-6 font-medium text-gray-900">Execute the powershell script with the following parameters</h2>
+      <p class="mt-1 text-sm text-gray-500">
+        This will execute THE powershell script based on your responses below.
+      </p>
+      <div class="mt-6">
+        <%if (status === 'success') { %>
+          <h2 class="text-lg leading-6 font-medium text-green-600">IT FREAKING WORKED!</h2>
+        <%}%>
+        <%if (status === 'error') { %>
+          <h2 class="text-lg leading-6 font-medium text-rose-600">IT FREAKING DIDN'T WORK!</h2>
+          <% for (var i = 0; i < error.length; i++) { %>
+            <p class="mt-1 text-sm text-rose-500">
+              <%= error[i].msg %> of <%= error[i].value %> for <%= error[i].param %>
+            </p>
+            <% } %>
+        <%}%>
+    </div>
+      <div class="flex-grow space-y-6">
+        <div>
+          <label for="parameterA" class="block text-sm font-medium text-gray-700">
+            Parameter A
+          </label>
+          <div class="mt-1 rounded-md shadow-sm flex">
+            <span class="bg-gray-50 border border-r-0 border-gray-300 rounded-l-md px-3 inline-flex items-center text-gray-500 sm:text-sm">
+              <i class="fad fa-user-secret fa-2x"></i>
+            </span>
+            <input type="text" name="parameterA" id="parameterA" autocomplete="parameterA" class="focus:ring-rose-500 focus:border-rose-500 flex-grow block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300" value="paramA">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-6 flex flex-col lg:flex-row">
+      <div class="flex-grow space-y-6">
+        <div>
+          <label for="parameterB" class="block text-sm font-medium text-gray-700">
+            Parameter B
+          </label>
+          <div class="mt-1 rounded-md shadow-sm flex">
+            <span class="bg-gray-50 border border-r-0 border-gray-300 rounded-l-md px-3 inline-flex items-center text-gray-500 sm:text-sm">
+              <i class="fas fa-cheese-swiss" fa-2x></i>
+            </span>
+            <input type="text" name="parameterB" id="parameterB" autocomplete="parameterB" class="focus:ring-rose-500 focus:border-rose-500 flex-grow block w-full min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300" value="paramB">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Form footer section -->
+  <div class="pt-6 divide-y divide-gray-200">
+    <div class="mt-4 py-4 px-4 flex justify-end sm:px-6">
+      <%- include('./components/_button', { text: 'Cancel', type: 'button', theme: 'inactive'}) %>
+      <%- include('./components/_button', { text: 'Save', type: 'submit', theme: 'active'}) %>
+    </div>
+  </div>
+</form>

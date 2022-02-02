@@ -1,0 +1,7 @@
+<%if (theme === 'active') { %>
+  <button type="<%= type %>" class="ml-5 bg-rose-700 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-rose-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">
+<%} else { %>
+  <button type="<%= type %>"  class="bg-white border border-gray-300 rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-rose-500">
+      <% } %>
+  <%= text %>
+</button>
